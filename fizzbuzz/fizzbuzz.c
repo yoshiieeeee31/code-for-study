@@ -1,24 +1,21 @@
 #include "fizzbuzz.h"
 
-int	main(void)
+void	fizzbuzz(int start, int end)
 {
-	int	i;
-
-	i = 1;
-	while (i < 1001)
+	while (start <= end)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if (start % 3 == 0 && start % 5 == 0)
 			ft_putstr ("FizzBuzz\n");
-		else if (i % 3 == 0)
+		else if (start % 3  == 0)
 			ft_putstr ("Fizz\n");
-		else if (i % 5 == 0)
+		else if (start % 5  == 0)
 			ft_putstr ("Buzz\n");
 		else
 		{
-			ft_putnbr (i);
+			ft_putnbr (start);
 			ft_putchar ('\n');
 		}
-		i++;
+		start++;
 	}
-	return (0);
 }
+
