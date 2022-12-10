@@ -5,5 +5,9 @@
  * courses, books, articles, and the like. Contact us if you are in doubt.
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/dnvim2 for more book information.
-***
-var foo = "method(" + argument1 + "," + argument2 + ")";
+***/
+mixin = {
+    applyName: function(config) {
+        return Factory(config, this.getName());
+    },
+}
