@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "libft.h"
 
 void	fizzbuzz(int start, int end)
 {
@@ -8,15 +8,16 @@ void	fizzbuzz(int start, int end)
 	while (i <= end)
 	{
 		if (i == 0)
-			printf ("0\n");
+			ft_putstr_fd("0", 1);
 		else if (i % 3 == 0 && i % 5 == 0)
-			printf ("FizzBuzz\n");
+			ft_putstr_fd("FizzBuzz", 1);
 		else if (i % 3 == 0)
-			printf ("Fizz\n");
+			ft_putstr_fd("Fizz", 1);
 		else if (i % 5 == 0)
-			printf ("Buzz\n");
+			ft_putstr_fd("Buzz", 1);
 		else
-			printf ("%d\n", i);
+			ft_putnbr_fd(i, 1);
+		ft_putchar_fd('\n', 1);
 		i++;
 	}
 }
